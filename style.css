@@ -16,7 +16,6 @@ h1{
     color: hsl(210, 46%, 95%);
     font-weight: 600;
 }
-
 .container{
     display: flex;
     flex-direction: column;
@@ -37,22 +36,37 @@ h1{
     background-color:  hsl(217, 19%, 35%);
 }
 
-.white{
+.white1{
     background-color: white;
 }
 
-.white h2{
+.white2{
+    background-color: white;
+}
+
+.white2 h2{
     color: hsla(217, 19%, 35%, 0.897);
 }
 
-.white h1{
+.white2 h1{
     color: hsla(217, 19%, 35%, 0.863);
 }
 
-.white p{
+.white2 p{
     color: hsla(217, 19%, 35%, 0.877);
 }
 
+.white1 h2{
+    color: hsla(217, 19%, 35%, 0.897);
+}
+
+.white1 h1{
+    color: hsla(217, 19%, 35%, 0.863);
+}
+
+.white1 p{
+    color: hsla(217, 19%, 35%, 0.877);
+}
 
 .blue{
     background-color:hsl(219, 29%, 14%)
@@ -89,4 +103,53 @@ h1{
     opacity: 70%;
     font-size: 15px;
     font-weight: 300;
+}
+
+@media screen and (min-width:1024px) {
+
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 85vh;
+    }
+
+    .main{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(2,1fr);
+        column-gap: 2rem;
+        row-gap: 1rem;
+        padding: 0rem 8rem;
+     
+    }
+
+    .container{
+        padding: 1.8rem;
+    }
+
+    .purple{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    .grey{
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    .white2{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    .blue{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+    
 }
